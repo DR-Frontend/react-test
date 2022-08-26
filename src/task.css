@@ -1,0 +1,25 @@
+.Card{
+   background-color: #454545;
+   color: azure;
+   text-align: center;
+   line-height: 1;
+   padding: 10px;
+   margin-top: 20px;
+   box-sizing: border-box;
+}
+.title{
+   font-family: sans-serif;
+   font-weight: bold;
+}
+.text{
+   text-decoration: line-through;
+}
+
+.bg-ok{
+   background-color: slateblue;
+   padding: 5px;
+}
+.bg-pend{
+   background-color: red;
+   padding: 5px;
+}

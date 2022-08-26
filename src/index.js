@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import {UserName} from "./componentes";
-import {Button} from './button'
+import {UserName} from "./Componentes";
+import {Button} from './Button'
+import {TaskCard} from "./Task";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -24,7 +25,13 @@ root.render(
       address={{street:"Evergreen 321", city:"Springfield"}}
     />
 
-    <Button/>
+    <Button text='Click me'/>
+    <Button text='Pagar'/>
+    <Button />
+    <Button text={3000}/>
+    <Button text={[1,2,3]}/>
+
+    <TaskCard ready={false}/>
 
   </>
 );
