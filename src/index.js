@@ -33,5 +33,9 @@ root.render(
 
     <TaskCard ready={false}/>
 
+    <input onChange={function(e){
+      console.log(e.target.value)
+    }} />
+
   </>
 );
