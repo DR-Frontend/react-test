@@ -4,6 +4,7 @@ import {UserName} from "./Componentes";
 import {Button, DoubleBtn} from './Button'
 import {TaskCard} from "./Task";
 import {Posts} from "./Post"
+import { Counter } from "./Counter";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -27,16 +28,6 @@ const users = [
   }
 ]
 
-const Counter = ()=>{
-  let counter = 100
-  return(
-    <div>
-      <h3>Counter: {counter}</h3>
-      <button>Sumar</button>
-    </div>
-  )
-}
-
 root.render(
   <>
     <h2>=COMPONENTES=</h2>
@@ -56,46 +47,56 @@ root.render(
       points={[100,30,10]}
       address={{street:"Evergreen 321", city:"Springfield"}}
     />
+    <hr/>
 
     <h2>=USO DE BOOLEANO PARA CAMBIAR CSS=</h2>
     <TaskCard ready={true}/>
+    <hr/>
     
     <h2>=USO DE 'ON CLICK'=</h2>
     <Button text='Click me'/>
     <Button text='Pagar'/>
-    <Button />
     <Button text={3000}/>
     <Button text={[1,2,3]}/>
     
     <DoubleBtn text2='Doble click'/>
-
+    <hr/>
 
     <h2>=USO DE 'ON CHANGE & ON SUBMIT'=</h2>
     <input onChange={handleChange} placeholder="texto en consola"/>
 
-    <form onSubmit={(e)=>{
+    <form onSubmit={e=>{
       e.preventDefault()
       console.log('Formulario enviado')
       alert('Enviado')
     }}>
       <p>Envío de formulario <button>Enviar formulario</button></p>
     </form>
+    <hr/>
 
     <h2>=API's=</h2>
     <Posts />
+    <hr/>
 
     <h2>=IMPRIMIR DATOS CON MAP=</h2>
-    {users.map(user => {
-      return <div>
+    {users.map((user,i) => {
+      return <div key={i}>
         <img src={user.image} alt="API Robots"/>
         <p>Nombre: {user.name}<br/>
         Departamento: {user.area}<br/>
         ID: {'2002-'+user.id}</p>
       </div>
     })}
+    <hr/>
 
-    <h2>= HOOKS =</h2>
+    <h2>= HOOKS: USE STATE =</h2>
     <Counter/>
+    <hr/>
+
+    <h2>= HOOKS: USE EFFECT =</h2>
+
+
+
      
   </>
 );

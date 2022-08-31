@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 
 export function Button({text='boton'}){
    return <button onClick={function (){
@@ -16,6 +16,6 @@ export function DoubleBtn ({text2}){
    </button>
 }
 
-Button.propTypes = {
-   text: PropTypes.string.isRequired
-}
+// Button.propTypes = {
+//    text: PropTypes.string.isRequired
+// }
