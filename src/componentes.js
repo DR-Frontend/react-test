@@ -1,7 +1,7 @@
 export function UserName({name, age, amount, married, points, address}){
    return <div>
-      <h1>{name}</h1>
       <ul>
+         <h3>{name}</h3>
          <li>Edad: {age}</li>
          <li>Monto: {amount}</li>
          <li>Edo. Civil: {married ? 'Casado' : 'Soltero'}</li>

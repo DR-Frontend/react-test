@@ -8,6 +8,14 @@ export function Button({text='boton'}){
    </button>
 }
 
+export function DoubleBtn ({text2}){
+   return <button onDoubleClick={()=>{
+      console.log('Diste Doble click')
+   }}>
+      {text2}
+   </button>
+}
+
 Button.propTypes = {
    text: PropTypes.string.isRequired
 }
